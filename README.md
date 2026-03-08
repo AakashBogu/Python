@@ -60,3 +60,4 @@ Built and maintained by **Aakash Bogu** — documenting a Python learning journe
 ## 📬 Contact
 
 - GitHub: [@AakashBogu](https://github.com/AakashBogu)
+- LinkedIn https://www.linkedin.com/in/aakashbogu/
