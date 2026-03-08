@@ -1,22 +1,10 @@
 # Python Keylogger
 
-## Description
-This project is a simple Python keylogger that records keyboard inputs.
-
-## Features
-- Records keystrokes
-- Saves them into a log file
-- Built using Python
-
-
-
-# 🔑 Python Keylogger
-
 A simple keylogger built with Python using the `pynput` library. Every key you press gets captured and saved to a log file — great for understanding how input monitoring works under the hood.
 
 ---
 
-## What It Does
+ What It Does
 
 - Listens for every key you press (letters, numbers, special keys — all of it)
 - Saves the keystrokes to a file called `log.txt` in real time
