@@ -53,7 +53,7 @@ source venv/bin/activate   # Windows: venv\Scripts\activate
 
 ## 👤 About
 
-Built and maintained by **Aakash Bogu** — documenting a Python learning journey.
+Built and maintained by **Aakash Bogu** — documenting a Python learning journey here.
 
 ---
 
