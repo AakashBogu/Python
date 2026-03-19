@@ -6,9 +6,9 @@ A lightweight keyboard activity monitor built with Python and `pynput`. Captures
 
 ---
 
-## 📸 Demo
+## 📸 Demo link here
 
-<!-- Add your demo GIF or video link here -->
+<!--(https://www.linkedin.com/posts/aakashbogu_python-cybersecurity-ethicalhacking-activity-7440443988161077248-nE0k?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF158sgBMEvNNv423OKBLZmjX0Sso97YsHI)-->
 
 
 ---
@@ -43,24 +43,7 @@ keylogger/
 
 ---
 
-## ⚙️ Setup & Usage
 
-### 1. Clone the repo
-
-```bash
-git clone https://github.com/aakashbogu/keylogger.git
-cd keylogger
-```
-
-### 2. Install dependencies
-
-```bash
-pip install pynput
-```
-
-### 3. Run
-
-```bash
 python keylogger.py
 ```
 
