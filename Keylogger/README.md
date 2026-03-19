@@ -1,54 +1,103 @@
-# Python Keylogger
+ 🔍 Python Keyboard Activity Monitor
 
-A simple keylogger built with Python using the `pynput` library. Every key you press gets captured and saved to a log file — great for understanding how input monitoring works under the hood.
+A lightweight keyboard activity monitor built with Python and `pynput`. Captures and logs keystrokes in real time — built for learning how OS-level input event handling works.
 
----
-
- What It Does
-
-- Listens for every key you press (letters, numbers, special keys — all of it)
-- Saves the keystrokes to a file called `log.txt` in real time
-- Prints each keystroke to the terminal so you can watch it live
-- Stops cleanly when you press `Esc`
+> ⚠️ **Ethical Use Only** — This tool is intended strictly for educational purposes on your own machine. Using it to monitor others without consent is illegal and unethical.
 
 ---
 
-## Requirements
+## 📸 Demo
 
-You just need Python installed and one library:
+<!-- Add your demo GIF or video link here -->
+
+
+---
+
+## 🧠 How It Works
+
+Your OS exposes a stream of input events. `pynput` taps into that stream via platform-specific APIs:
+
+| Platform | Underlying API |
+|----------|----------------|
+| Windows  | Win32 API      |
+| macOS    | Quartz / Core Graphics |
+| Linux    | Xlib           |
+
+The script registers two event callbacks:
+
+- **`on_press(key)`** — fires the moment a key is pressed down; writes the key to a log file
+- **`on_release(key)`** — fires when the key comes back up; stops the listener when `ESC` is pressed
+
+Alphanumeric keys carry a `.char` attribute (e.g., `'a'`, `'5'`). Special keys like `Shift`, `Enter`, and `Esc` don't — so they're caught via `AttributeError` and written in bracket notation: `[Key.enter]`.
+
+---
+
+## 🗂️ Project Structure
+
+```
+keylogger/
+├── keylogger.py   # Main script
+├── log.txt        # Output log file (auto-created on first run)
+└── README.md
+```
+
+---
+
+## ⚙️ Setup & Usage
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/aakashbogu/keylogger.git
+cd keylogger
+```
+
+### 2. Install dependencies
 
 ```bash
 pip install pynput
 ```
 
----
-
-## How to Run
+### 3. Run
 
 ```bash
 python keylogger.py
 ```
 
-Once it's running, start typing. You'll see each key printed in the terminal, and everything gets saved to `log.txt` automatically.
-
-Press **Esc** whenever you want to stop.
+Keystrokes are logged to `log.txt` in real time. Press **`ESC`** to stop.
 
 ---
 
-## Project Structure
+## 📄 Sample Output (`log.txt`)
 
 ```
-keylogger/
-│
-├── keylogger.py    # Main script
-└── log.txt         # Generated automatically when you run the script
+hello [Key.space] everyone [Key.enter] this [Key.space] is [Key.space] a [Key.space] test [Key.esc]
 ```
 
 ---
 
-## How It Works (Quick Breakdown)
+## 💡 What This Teaches
 
-- `on_press(key)` — fires every time a key is pressed, appends it to a list, then writes to the file
-- `write_file(keys)` — opens `log.txt` and writes all captured keys, separated by spaces for readability
-- `on_release(key)` — fires on key release; if the key is `Esc`, it stops the listener
-- The `Listener` from `pynput` ties everything together and runs in the background
+- How operating systems expose input events to user-space programs
+- Event-driven programming with callback functions
+- Handling exceptions for type-based branching 
+- Real-time file I/O with append mode
+
+This is the same core mechanism used in:
+- Accessibility tools (screen readers, switch access)
+- Hotkey managers (AutoHotkey, Hammerspoon)
+- Automation frameworks (PyAutoGUI, Selenium)
+
+---
+
+## 🛠️ Built With
+
+- **Python 3**
+- **[pynput](https://pypi.org/project/pynput/)** — cross-platform keyboard/mouse listener
+](https://www.linkedin.com/in/aakashbogu/)
+---
+
+## 👤 Author
+
+**Aakash** — CS undergrad | AIML enthusiast  
+[LinkedIn](https://www.linkedin.com/in/aakashbogu/)) · [GitHub](https://github.com/aakashbogu)
