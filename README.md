@@ -9,8 +9,8 @@ A personal portfolio of beginner and intermediate Python projects.
 ```
 Python/
 │
-├── beginner/          # Core Python concepts and small projects
-└── utils/             # Reusable helper scripts and utilities
+├── Calculator/        # Command-line arithmetic calculator with input validation
+└── Keylogger/         # Educational keystroke activity monitor
 ```
 
 > Structure will evolve as more projects are added.
