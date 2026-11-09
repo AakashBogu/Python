@@ -9,8 +9,9 @@ A personal portfolio of beginner and intermediate Python projects.
 ```
 Python/
 │
-├── Calculator/        # Command-line arithmetic calculator with input validation
-└── Keylogger/         # Educational keystroke activity monitor
+├── Calculator/            # Command-line arithmetic calculator with input validation
+├── Keylogger/             # Educational keystroke activity monitor
+└── NumberGuessingGame/    # Interactive random number guessing game with clues
 ```
 
 > Structure will evolve as more projects are added.
